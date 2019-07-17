@@ -3,6 +3,7 @@ import PureAlerts from './Alerts';
 import WithPortal from "./hoc/WithPortal";
 
 const alertsListEl = document.querySelector('.alerts-list');
+const Alerts = WithPortal(alertsListEl)(PureAlerts)
 
 class AlertCreate extends Component {
     constructor(props) {
@@ -41,7 +42,6 @@ class AlertCreate extends Component {
     }
   
     render() {
-      const Alerts = WithPortal(alertsListEl)(PureAlerts)
       return (
         <div className="input-alert">
           <input 
